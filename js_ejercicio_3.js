@@ -38,6 +38,8 @@ boton.addEventListener("click", (event)=>{
     // Si el campo de texto no está vacío, gregamos a la lista si no, lanzamos un mensaje
     if (texto.value) {
         lista.append(nuevoElemento());
+        // Reseteamos el campo de entrada
+        texto.value = "";
     } else {
         alert("El elemento no puede estar vacío");
     }

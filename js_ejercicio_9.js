@@ -55,8 +55,14 @@ function nuevoElemento(lista) {
     });
     // Añadimor el checkBox al nuevo elemento
     nuevoLi.append(checkBox);    
+    // Creamos y colgamos un Labl para el checkbox
+    let nuevoLabel = document.createElement("label");
+    nuevoLabel.textContent = "Completada";
+    nuevoLi.append(nuevoLabel);
     // Colgamos el nuevo elemento a la lista
     lista.append(nuevoLi);
+    // Reseteamos la entrada
+    textoTarea.value = "";
 }
 
 // Creamos una función que comprueba si algún elemento tiene el checkBox marcado y en tal caso lo elimina
